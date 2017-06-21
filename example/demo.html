@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <style>
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      opacity: 0;
+      transition: 2s;
+    }
+
+    .container.active {
+      opacity: 1;
+    }
+
+    #btn {
+      position: fixed;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+</div>
+<button id="btn">test</button>
+</body>
+<script src="../dist/index.js"></script>
+<script>
+  const stage = new UcarWheel({
+    el: document.querySelector('.container'),
+    width: 600,
+    height: 600,
+    radius: 300,
+    background: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497947197342&di=d3f53f631f7731a35338e4eab1535c0b&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F314e251f95cad1c847991a5b793e6709c93d51a8.jpg',
+    lineColor: '#FF9900',
+    textColor: '#fff',
+    list: [
+      {
+        id: 0,
+        text: '芽野爱衣',
+        icon: 'img/0.png'
+      },
+      {
+        id: 1,
+        text: '花泽香菜',
+        icon: 'img/1.png'
+      },
+      {
+        id: 2,
+        text: '松户遥',
+        icon: 'img/2.png'
+      },
+      {
+        id: 3,
+        text: '崛江由衣',
+        icon: 'img/3.png'
+      },
+      {
+        id: 4,
+        text: '钉宫理惠',
+        icon: 'img/4.png'
+      },
+      {
+        id: 5,
+        text: '雨宫天',
+        icon: 'img/5.png'
+      },
+      {
+        id: 6,
+        text: '神谷浩史',
+        icon: 'img/6.png'
+      },
+      {
+        id: 7,
+        text: '小野大辅',
+        icon: 'img/7.png'
+      },
+    ],
+    size: 22,
+    key: 'id',
+    text: 'text'
+  })
+  document.querySelector('.container').classList.add('active')
+  const btn = document.getElementById('btn')
+  btn.addEventListener('click', function () {
+    stage.rotateStart()
+    setTimeout(function () {
+      stage.rotateEnd(6).then(val => console.log(val))
+    }, 1000)
+  }, false)
+</script>
+</html>
