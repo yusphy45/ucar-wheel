@@ -1,6 +1,6 @@
 ## 准备
-确保全局环境下含有标准Promise的定义
-确保全局环境下Object.assign函数的定义
+- 确保全局环境下含有标准Promise的定义
+- 确保全局环境下Object.assign函数的定义
 
 ## 使用
 
@@ -13,7 +13,7 @@ https://unpkg.com/ucar-wheel@0.0.2/dist/index.min.js
 ```
 npm install --save ucar-wheel
 
-import UcarWhell from 'ucar-wheel'
+import UcarWheel from 'ucar-wheel'
 ```
 
 ## API
