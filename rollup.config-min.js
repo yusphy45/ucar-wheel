@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel';
+import uglify from 'rollup-plugin-uglify';
 import filesize from 'rollup-plugin-filesize';
 
 export default {
@@ -9,7 +10,8 @@ export default {
     babel({
       exclude: 'node_modules/**' // only transpile our source code
     }),
+    uglify(),
     filesize()
   ],
-  dest: 'dist/index.js'
+  dest: 'dist/index.min.js'
 };

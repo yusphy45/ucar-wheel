@@ -1,6 +1,6 @@
 {
   "name": "ucar-wheel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "component for lucky wheel",
   "files": [
     "dist"
@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c && rollup -c rollup.config-min.js"
   },
   "keywords": [
     "lucky",

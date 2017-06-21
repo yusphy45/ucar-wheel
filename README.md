@@ -3,13 +3,30 @@
 确保全局环境下Object.assign函数的定义
 
 ## 使用
+
+### cdn
+```
+https://unpkg.com/ucar-wheel@0.0.2/dist/index.min.js
+```
+
+### npm
 ```
 npm install --save ucar-wheel
 
 import UcarWhell from 'ucar-wheel'
-
-const stage = new UcarWheel(options)
 ```
+
+## API
+
+### 构造函数
+const stage = new UcarWheel(options)
+
+### stage.rotateStart
+转盘开始旋转
+
+### stage.rotateEnd(id)
+3s均匀减速至停止id为抽中项标识
+返回一个Promise对象resolve奖品列表中的抽中项
 
 ## options初始化参数属性
 键名|类型|默认值|描述
@@ -37,14 +54,7 @@ list: [
 ]
 ```
 
-## API
 
-### stage.rotateStart
-转盘开始旋转
-
-### stage.rotateEnd(id)
-3s均匀减速至停止id为抽中项标识
-返回一个Promise对象resolve奖品列表中的抽中项
 
 
 
